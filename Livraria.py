@@ -53,9 +53,10 @@ class LivrariaTest(unittest.TestCase):
         
     def test_dois_de_dois(self):
         self.assertEqual(4*42*0.95, livraria([2,2,0,0,0]))
+    
+    def teste_dois_grupos_separados(self):
+        self.assertEqual((3*42*0.9)+42, livraria([2,1,1,0,0]));
         
- #   def test_dois_grupos(self):
- #       self.assertEqual(3*42*0.9+42, livraria([2,1,1,0,0,0,0]))
 
 if __name__ == '__main__':
     unittest.main()
