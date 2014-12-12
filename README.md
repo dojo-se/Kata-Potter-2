@@ -26,3 +26,12 @@ Por exemplo, quanto custaria essa compra abaixo?
 - 1 cópia do quinto livro
 
 (resposta: 268,80 reais)
+
+## Links úteis
+
+[Evento no Google+](https://plus.google.com/events/ceo2t3m6hr7e9me75cjqh0e9vk0)
+
+[Evento no Facebook](https://www.facebook.com/events/1745047829052821/)
+
+[Participe da comunidade GDG Aracaju](http://www.gdgaracaju.com.br/p/participe.html)
+
