@@ -21,9 +21,10 @@ class Livraria(object):
         soma = 0
         m = lambda livro: livro.preco
         r = lambda soma, preco: soma + preco
-        for lista in self.carrinho.produtos:
-            soma = reduce(r, map(m, lista)) + soma
-            soma = soma -soma*(len(lista) -1)*0.05
+        for colecao in self.carrinho.produtos:
+            soma_colecao = reduce(r, map(m, colecao))
+            soma = soma + soma_colecao -soma_colecao*(len(colecao) -1)*0.05
+            soma = round(soma,2)
         return soma
         
 
@@ -54,12 +55,42 @@ class LivrariaTest(unittest.TestCase):
         self.livraria.adicionar_livro_no_carrinho(1)
         self.assertEqual(84 - (84*0.05), self.livraria.finalizar_compra())
     
+    def test_tres_livros_diferentes(self):
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.livraria.adicionar_livro_no_carrinho(2)
+        self.assertEqual(126 - (126*0.1), self.livraria.finalizar_compra())
+
+    def test_quatro_livros_diferentes(self):
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.livraria.adicionar_livro_no_carrinho(2)
+        self.livraria.adicionar_livro_no_carrinho(3)
+        self.assertEqual(42*4 - (42*4*0.15), self.livraria.finalizar_compra())
+
+    def test_quatro_livros_diferentes(self):
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.livraria.adicionar_livro_no_carrinho(2)
+        self.livraria.adicionar_livro_no_carrinho(3)
+        self.livraria.adicionar_livro_no_carrinho(4)
+        self.assertEqual(42*5 - (42*5*0.2), self.livraria.finalizar_compra())
+    
     def test_dois_livros_diferentes2(self):
         self.livraria.adicionar_livro_no_carrinho(0)
         self.livraria.adicionar_livro_no_carrinho(1)
         self.livraria.adicionar_livro_no_carrinho(0)
         self.livraria.adicionar_livro_no_carrinho(1)
-        self.assertEqual((84 - (84*0.05)*2), self.livraria.finalizar_compra())
+        self.assertEqual(159.6, self.livraria.finalizar_compra())
+
+    def teste_dois_livros_diferentes3(self):
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.livraria.adicionar_livro_no_carrinho(0)
+        self.livraria.adicionar_livro_no_carrinho(1)
+        self.assertEqual(239.4, self.livraria.finalizar_compra())
 
 
 if __name__ == '__main__':
