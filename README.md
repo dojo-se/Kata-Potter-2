@@ -1,4 +1,4 @@
-Kata-Potter-2
+﻿Kata-Potter-2
 =============
 
 #Dojo Dezembro/2014
@@ -27,11 +27,14 @@ Por exemplo, quanto custaria essa compra abaixo?
 
 (resposta: 268,80 reais)
 
-## Links úteis
+##Versões
+
+Verifique as diferentes [versões usando as tags](https://github.com/dojo-se/Kata-Potter-2/releases).
+
+##Links úteis
 
 [Evento no Google+](https://plus.google.com/events/ceo2t3m6hr7e9me75cjqh0e9vk0)
 
 [Evento no Facebook](https://www.facebook.com/events/1745047829052821/)
 
 [Participe da comunidade GDG Aracaju](http://www.gdgaracaju.com.br/p/participe.html)
-
